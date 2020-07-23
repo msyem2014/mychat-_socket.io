@@ -1,0 +1,23 @@
+
+Below are the commands we are going to use to upload files to GitHub with Git Bash
+
+
+-----first time-
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/msyem2014/palcourses.git
+
+git push -u origin master
+-------------------
+
+
+ls
+cd
+git init
+git remote add origin [gitLink]
+git remote -v
+git add .
+git commit -m "First commit"
+git push origin master

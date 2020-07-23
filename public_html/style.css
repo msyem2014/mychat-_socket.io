@@ -1,0 +1,98 @@
+ /* Chat containers */
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color:#d21beb
+
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+    color:#d21beb
+
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color:#d21beb
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #9b59b6;
+} 
+
+
+/*   .w3-flat-wet-asphalt
+ chat container */
+ 
+.w3-flat-turquoise
+{color:#fff;background-color:#1abc9c}
+.w3-flat-emerald
+{color:#fff;background-color:#2ecc71}
+.w3-flat-peter-river
+{color:#fff;background-color:#3498db}
+.w3-flat-amethyst
+{color:#fff;background-color:#9b59b6}
+.w3-flat-wet-asphalt
+{color:#fff;background-color:#34495e}
+.w3-flat-green-sea
+{color:#fff;background-color:#16a085}
+.w3-flat-nephritis
+{color:#fff;background-color:#27ae60}
+.w3-flat-belize-hole
+{color:#fff;background-color:#2980b9}
+.w3-flat-wisteria
+{color:#fff;background-color:#8e44ad}
+.w3-flat-midnight-blue
+{color:#fff;background-color:#2c3e50}
+.w3-flat-sun-flower
+{color:#fff;background-color:#f1c40f}
+.w3-flat-carrot
+{color:#fff;background-color:#e67e22}
+.w3-flat-alizarin
+{color:#fff;background-color:#e74c3c}
+.w3-flat-clouds
+{color:#000;background-color:#ecf0f1}
+.w3-flat-concrete
+{color:#fff;background-color:#95a5a6}
+.w3-flat-orange
+{color:#fff;background-color:#f39c12}
+.w3-flat-pumpkin
+{color:#fff;background-color:#d35400}
+.w3-flat-pomegranate
+{color:#fff;background-color:#c0392b}
+.w3-flat-silver
+{color:#000;background-color:#bdc3c7}
+.w3-flat-asbestos
+{color:#fff;background-color:#7f8c8d}

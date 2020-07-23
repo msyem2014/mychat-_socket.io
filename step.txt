@@ -1,0 +1,109 @@
+step.
+
+download desgin
+1- make json file for lib
+npm init  
+--------------------------------------------------------
+|C:\Users\kar\Desktop\realchat>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (realchat)
+version: (1.0.0)
+description: real chat made by msyem
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: mohannad yosef syem
+license: (ISC)
+About to write to C:\Users\kar\Desktop\realchat\package.json:
+
+{
+  "name": "realchat",
+  "version": "1.0.0",
+  "description": "real chat made by msyem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohannad yosef syem",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+
+ --------------------------------------------------------
+ install backend server with some lib and module
+ 
+ 1- npm install express --save
+ 2- npm install socket.io
+ 3- npm install nodemon --save-dev (module in dev mode)-
+   or 
+   npm install -g --force nodemon
+ 4-npm install --save path
+ 5-  npm install serve-static
+
+run server
+
+ nodemon index
+
+
+------------------
+ make server index.js
+
+ write
+
+
+index.js
+var express = require('express');
+var socket  = require('socket.io');
+
+var application = express();
+var server = application.listen(5500,function(){
+	console.log('Your Server Is runing at http:/localhost:5000');
+});
+
+application.use(express.static('public_html'));
+
+
+var sio = socket(server);
+
+sio.on('connection',function(visitor){
+
+	console.log('we have a new visitor as id=>',visitor.id);
+
+});
+
+or best use this code
+
+var express = require('express');
+var socket  = require('socket.io');
+var path = require('path');
+var serveStatic = require('serve-static');
+
+var application = express();
+var server = application.listen(5500,function(){
+	console.log('Your Server Is runing at http:/localhost:5000');
+});
+
+ 
+application.use(serveStatic(path.join(__dirname, 'public_html'))); // recive all connect from user
+
+
+
+var sio = socket(server);
+
+sio.on('connection',function(visitor){
+
+	console.log('we have a new visitor as id=>',visitor.id);
+
+});
